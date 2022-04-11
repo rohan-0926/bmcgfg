@@ -1,3 +1,13 @@
+*****Day - 1
+    Question - https://www.geeksforgeeks.org/given-a-sorted-and-rotated-array-find-if-there-is-a-pair-with-a-given-sum/
+
+
+
+
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 #define fast ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);

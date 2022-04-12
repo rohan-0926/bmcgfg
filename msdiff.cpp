@@ -1,3 +1,13 @@
+***Day - 1
+    Questions  - https://www.geeksforgeeks.org/maximum-sum-absolute-difference-array/
+                 https://www.geeksforgeeks.org/maximize-sum-consecutive-differences-circular-array/
+
+
+
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 #define fast ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);

@@ -17,16 +17,23 @@ int dirx[]={-1,-1,0,1,1,1,0,-1};
 int diry[]={0,1,1,1,0,-1,-1,-1};
 int top=0;
 
-void solve()
+int getMin(stack<int>st)
 {
-    stack<int>st;
-    st.push(2);
-    st.push(4);
-    st.push(5);
-    st.push(6);
-    st.push(7);
-    st.push(8);
-    int i=0,res=0;
+    int mini=st.top();
+    while(!st.empty())
+    {
+        if(mini>st.top())
+        {
+            mini=st.top();
+            // st.pop();
+        }
+        st.pop();
+    }
+    return mini;   
+}
+int getMid(stack<int>st)
+{
+     int i=0,res=0;
     if(st.size()%2!=0){
         while(!st.empty())
         {
@@ -53,9 +60,20 @@ void solve()
             }
         }
     }
-
-    cout<<res<<endl;
-
+    return res;
+}
+void solve()
+{
+    stack<int>st;
+    st.push(2);
+    st.push(4);
+    st.push(5);
+    st.push(6);
+    st.push(7);
+    st.push(8);
+   
+   cout<<"Min ele is = " << getMin(st) <<endl;
+   cout<<"Middle ele is = " << getMid(st) <<endl;
 }
 signed main(){
     fast;

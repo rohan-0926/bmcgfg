@@ -22,18 +22,6 @@ int diry[]={0,1,1,1,0,-1,-1,-1};
 //i,j-1
 int x4[]={-1,0,1,0};
 int y4[]={0,1,0,-1};
-void dfs(vector<vector<int>>&v,int i,int j,int r,int c)
-{
-    if(i<0 || j<0 || i>=r || j>=c || v[i][j]!=1)
-    {
-        return;
-    }
-    v[i][j]=2;
-    for(int k=0;k<8;k++)
-    {
-        dfs(v,i+dirx[k],j+diry[k],r,c);
-    }
-}
 void solve()
 {
    int n,k;cin>>n>>k;
@@ -45,7 +33,7 @@ void solve()
    int count=0;
    sort(v.begin(),v.end());
    int left=0,right=v.size()-1;
-   while(left<=right)
+   while(left<right)
     {
         if(v[left]==k-v[right])
         {
